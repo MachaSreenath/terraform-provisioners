@@ -15,9 +15,9 @@ resource "aws_instance" "web" {
   }
 
   
-  provisioner "local-exec" {
-    command = "ansible-playbook -i inventory web.yaml" # self = aws_instance.web
-  }
+  # provisioner "local-exec" {
+  #   command = "ansible-playbook -i inventory web.yaml" # self = aws_instance.web
+  # }
 
   provisioner "local-exec" {
     when = destroy
