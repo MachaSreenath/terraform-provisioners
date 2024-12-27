@@ -20,7 +20,7 @@ resource "aws_instance" "web" {
   }
 
   provisioner "local-exec" {
-    command = "echo this will execute at the time of destroy, you can trigger other system like email and sending alerts" # self = aws_instance.web
     when = destroy
+    command = "echo this will execute at the time of destroy, you can trigger other system like email and sending alerts" # self = aws_instance.web
   }
 }
