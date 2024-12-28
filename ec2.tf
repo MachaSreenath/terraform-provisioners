@@ -42,7 +42,7 @@ resource "aws_instance" "web" {
 }
 
 resource "aws_security_group" "roboshop-all" {
-    name        = "provisioner"
+    name = "provisioner"
 
     ingress {
         description = "Allow All ports"
